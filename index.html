@@ -42,6 +42,8 @@
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 flex-column">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename">Nimantha Galhenage</h1>
         <div class="header-social-links d-flex">
           <a href="https://x.com/nimanthaonline"><i class="bi bi-twitter-x"></i></a>
@@ -1325,50 +1327,6 @@ document.addEventListener('DOMContentLoaded', function () {
 @media (max-width: 991.98px) {
   .header .logo .header-social-links {
     display: flex !important;
-  }
-}
-
-/* Desktop: Move social media links to the right in the header */
-@media (min-width: 992px) {
-  .header-container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-  .header .logo {
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 0 !important;
-  }
-  .header .header-social-links {
-    position: static !important;
-    margin-left: 24px !important;
-    margin-top: 0 !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    gap: 12px !important;
-    width: auto !important;
-  }
-}
-/* Tablet & Mobile: Show social links below sitename, left aligned */
-@media (max-width: 991.98px) {
-  .header .logo {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  .header .sitename {
-    margin-bottom: 6px !important;
-  }
-  .header .header-social-links {
-    display: flex !important;
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-    gap: 10px !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    width: 100%;
-    position: static !important;
   }
 }
   </style>
