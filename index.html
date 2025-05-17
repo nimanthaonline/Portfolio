@@ -41,10 +41,14 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 flex-column">
         <h1 class="sitename">Nimantha Galhenage</h1>
+        <div class="header-social-links d-flex">
+          <a href="https://x.com/nimanthaonline"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://fb.com/nimanthaonline"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com/nimantha.galhenage"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/nimanthaonline/"><i class="bi bi-linkedin"></i></a>
+        </div>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -58,12 +62,6 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="https://x.com/nimanthaonline"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://fb.com/nimanthaonline"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com/nimantha.galhenage"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/nimanthaonline/"><i class="bi bi-linkedin"></i></a>
-      </div>
       <!-- Dark Mode Toggle Button -->
       <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary ms-3" aria-label="Toggle dark mode" style="border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;">
         <i class="bi bi-moon"></i>
@@ -1188,8 +1186,8 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Responsive: 20px padding in body area only on mobile */
     @media (max-width: 991.98px) {
       body {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 00px !important;
+    padding-right: 00px !important;
   }
     }
     /* Add more dark mode styles as needed */
@@ -1268,6 +1266,110 @@ document.addEventListener('DOMContentLoaded', function () {
 #about .personal-info .info-item {
   font-size: 0.98em !important;
   padding: 0.25rem 0 !important;
+}
+
+/* Responsive header adjustments */
+@media (max-width: 991.98px) {
+  .header-container {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .header .logo {
+    flex: 1 1 auto !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    display: flex !important;
+    margin-right: 0 !important;
+  }
+  .header .sitename {
+    text-align: left !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .header-social-links {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    gap: 10px !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    margin-left: 10px !important;
+  }
+}
+
+/* Stack sitename and social links vertically in mobile */
+@media (max-width: 991.98px) {
+  .header .logo {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .header .sitename {
+    margin-bottom: 6px !important;
+  }
+  .header-social-links {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    gap: 10px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  /* Hide the header-social-links outside .logo on mobile */
+  .header > .header-social-links {
+    display: none !important;
+  }
+}
+
+/* Show social links inside logo only on mobile */
+@media (max-width: 991.98px) {
+  .header .logo .header-social-links {
+    display: flex !important;
+  }
+}
+
+/* Desktop: Move social media links to the right in the header */
+@media (min-width: 992px) {
+  .header-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .header .logo {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+  .header .header-social-links {
+    position: static !important;
+    margin-left: 24px !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: auto !important;
+  }
+}
+/* Tablet & Mobile: Show social links below sitename, left aligned */
+@media (max-width: 991.98px) {
+  .header .logo {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .header .sitename {
+    margin-bottom: 6px !important;
+  }
+  .header .header-social-links {
+    display: flex !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    gap: 10px !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100%;
+    position: static !important;
+  }
 }
   </style>
 
