@@ -1187,69 +1187,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* Responsive: 20px padding in body area only on mobile */
     @media (max-width: 991.98px) {
-      /* Make fonts normal size in mobile view */
-      body,
-      body h1,
-      body h2,
-      body h3,
-      body h4,
-      body h5,
-      body h6,
-      .sitename,
-      .header-social-links a,
-      .navmenu a,
-      .btn,
-      .btn-outline,
-      .btn-outline-primary,
-      .portfolio-content,
-      .resume-wrapper,
-      .timeline-left,
-      .timeline-right,
-      .service-item,
-      .section-title,
-      .stat-label,
-      .stat-number,
-      .lead,
-      .description,
-      .profile-info,
-      .info-item,
-      .contact-info,
-      .footer,
-      .copyright,
-      .social-links a {
-        font-size: 1em !important;
-      }
-      h1 { font-size: 1.5rem !important; }
-      h2 { font-size: 1.2rem !important; }
-      h3 { font-size: 1.05rem !important; }
-      h4, h5, h6 { font-size: 1rem !important; }
-
-      /* About section: stack image and content vertically */
-      #about .row.align-items-center {
-        flex-direction: column !important;
-      }
-      #about .col-lg-6 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        margin-bottom: 2rem;
-      }
-      #about .about-image {
-        margin-bottom: 1.5rem;
-        text-align: center;
-      }
-
-      /* About personal info: stack each info-item vertically */
-      #about .personal-info .row.g-4 {
-        flex-direction: column !important;
-        gap: 0 !important;
-      }
-      #about .personal-info .col-6 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        margin-bottom: 0.5rem;
-      }
+      body {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
     }
     /* Add more dark mode styles as needed */
 
@@ -1304,6 +1245,29 @@ document.addEventListener('DOMContentLoaded', function () {
 .portfolio .row.g-4 {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 1.5rem;
+}
+
+/* Left align hero text */
+#hero h2,
+#hero .lead,
+#hero p {
+  text-align: left !important;
+}
+
+/* About section: make personal info smaller and stack vertically on all screens */
+#about .personal-info .row.g-4 {
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+#about .personal-info .col-6 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  margin-bottom: 0.5rem;
+}
+#about .personal-info .info-item {
+  font-size: 0.98em !important;
+  padding: 0.25rem 0 !important;
 }
   </style>
 
