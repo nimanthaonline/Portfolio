@@ -20,9 +20,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #0a0f14; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0f2943; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #328ae8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --default-color: #98cafc; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: rgb(50, 138, 232); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -45,10 +45,10 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #194082;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #8a5050;
   --contrast-color: #ffffff;
 }
 
@@ -243,6 +243,14 @@ h6 {
     justify-content: center;
     align-items: center;
     display: flex !important;
+  }
+  body,
+  .container,
+  .container-fluid,
+  .section,
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
@@ -1985,4 +1993,25 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+body.dark-mode .card,
+body.dark-mode .portfolio-card,
+body.dark-mode .skills .skill-box,
+body.dark-mode .about .personal-info,
+body.dark-mode .testimonials .testimonial-item,
+body.dark-mode .services .service-item,
+body.dark-mode .contact .contact-form,
+body.dark-mode .resume .resume-wrapper,
+body.dark-mode .faq .faq-container .faq-item,
+body.dark-mode .portfolio .portfolio-card,
+body.dark-mode .service-details .content .features .feature-box,
+body.dark-mode .service-details .service-info,
+body.dark-mode .service-details .related-services {
+  background: #10232e !important; /* dark teal */
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode {
+  background-color: #08171f !important; /* even darker teal for page background */
 }
