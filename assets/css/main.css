@@ -26,7 +26,9 @@
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-
+.resume .resume-wrapper {
+  border-radius: 16px !important;
+}
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #0a0f14;  /* The default color of the main navmenu links */
@@ -153,6 +155,8 @@ h6 {
   -webkit-backdrop-filter: blur(16px);
   background-color: rgba(255,255,255,0.85) !important;
   box-shadow: none !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .header .header-container {
@@ -167,7 +171,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 18px !important;
   margin-right: 8px;
 }
 
@@ -668,7 +672,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #f5f5f5;
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -1194,7 +1198,7 @@ section,
   padding: 8px 20px;
   cursor: pointer;
   border-radius: 30px;
-  background-color: color-mix(in srgb, var(--surface-color), transparent 50%);
+  background-color: color-mix(in srgb, #384d5b, transparent 50%);
   color: var(--default-color);
   transition: all 0.3s ease-in-out;
 }
@@ -2014,4 +2018,95 @@ body.dark-mode .service-details .related-services {
 
 body.dark-mode {
   background-color: #08171f !important; /* even darker teal for page background */
+}
+
+@media (max-width: 991.98px) {
+  /* Boxes are dark and texts are light in dark mode on mobile */
+  body.dark-mode .card,
+  body.dark-mode .portfolio-card,
+  body.dark-mode .skills .skill-box,
+  body.dark-mode .about .personal-info,
+  body.dark-mode .testimonials .testimonial-item,
+  body.dark-mode .services .service-item,
+  body.dark-mode .contact .contact-form,
+  body.dark-mode .resume .resume-wrapper,
+  body.dark-mode .faq .faq-container .faq-item,
+  body.dark-mode .portfolio .portfolio-card,
+  body.dark-mode .service-details .content .features .feature-box,
+  body.dark-mode .service-details .service-info,
+  body.dark-mode .service-details .related-services {
+    background: #10232e !important;
+    color: #f5f5f5 !important;
+  }
+  body.dark-mode .card *,
+  body.dark-mode .portfolio-card *,
+  body.dark-mode .skills .skill-box *,
+  body.dark-mode .about .personal-info *,
+  body.dark-mode .testimonials .testimonial-item *,
+  body.dark-mode .services .service-item *,
+  body.dark-mode .contact .contact-form *,
+  body.dark-mode .resume .resume-wrapper *,
+  body.dark-mode .faq .faq-container .faq-item *,
+  body.dark-mode .portfolio .portfolio-card *,
+  body.dark-mode .service-details .content .features .feature-box *,
+  body.dark-mode .service-details .service-info *,
+  body.dark-mode .service-details .related-services * {
+    color: #f5f5f5 !important;
+  }
+
+  /* Work experience box: rounded corners and 20px padding */
+  .resume .resume-wrapper {
+    border-radius: 16px !important;
+    padding: 20px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .resume .resume-wrapper {
+    padding: 20px !important;
+  }
+}
+
+body.dark-mode .header {
+  background-color: rgba(16, 35, 46, 0.92) !important; /* dark teal, blurred */
+  color: #f5f5f5 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: none !important;
+}
+
+/* Make nav links and footer text white in dark mode */
+body.dark-mode .navmenu a,
+body.dark-mode .navmenu a:focus,
+body.dark-mode .navmenu li,
+body.dark-mode .navmenu ul,
+body.dark-mode .footer,
+body.dark-mode .footer *,
+body.dark-mode .footer .social-links a {
+  color: #fff !important;
+}
+
+/* Footer background dark in dark mode */
+body.dark-mode .footer {
+  background-color: #10232e !important;
+  color: #fff !important;
+}
+
+/* Light mode: fonts are darker for better readability */
+body,
+body .navmenu a,
+body .navmenu a:focus,
+body .footer,
+body .footer *,
+body .footer .social-links a,
+body .section,
+body .resume .resume-wrapper,
+body .portfolio .portfolio-card,
+body .skills .skill-box,
+body .about .personal-info,
+body .testimonials .testimonial-item,
+body .services .service-item,
+body .contact .contact-form,
+body .faq .faq-container .faq-item {
+  color: #d6d6d6 !important;
 }
