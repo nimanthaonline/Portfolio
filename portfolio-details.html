@@ -182,13 +182,13 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">EasyFolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Nimantha Galhenage</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/nimanthaonline"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://fb.com/nimanthaonline"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/nimantha.galhenage"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/nimanthaonline/"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -217,87 +217,147 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    // Dark Mode Toggle Logic for both desktop and mobile
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleBtn = document.getElementById('darkModeToggle');
-      const toggleBtnMobile = document.getElementById('darkModeToggleMobile');
-      const body = document.body;
-
-      function setDarkMode(enabled) {
-        if (enabled) {
-          body.classList.add('dark-mode');
-          if (toggleBtn) toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
-          if (toggleBtnMobile) toggleBtnMobile.innerHTML = '<i class="bi bi-sun"></i>';
-        } else {
-          body.classList.remove('dark-mode');
-          if (toggleBtn) toggleBtn.innerHTML = '<i class="bi bi-moon"></i>';
-          if (toggleBtnMobile) toggleBtnMobile.innerHTML = '<i class="bi bi-moon"></i>';
-        }
-      }
-
-      // Load preference
-      setDarkMode(localStorage.getItem('darkMode') === 'enabled');
-
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-          const enabled = !body.classList.contains('dark-mode');
-          setDarkMode(enabled);
-          localStorage.setItem('darkMode', enabled ? 'enabled' : 'disabled');
-        });
-      }
-      if (toggleBtnMobile) {
-        toggleBtnMobile.addEventListener('click', () => {
-          const enabled = !body.classList.contains('dark-mode');
-          setDarkMode(enabled);
-          localStorage.setItem('darkMode', enabled ? 'enabled' : 'disabled');
-        });
-      }
-    });
-  </script>
-
   <style>
-    /* Apply dark mode and box styling for portfolio details page as well */
-
-    /* Dark mode background and text */
-    body.dark-mode {
-      background-color: #08171f !important;
-      /* dark teal */
-      color: #160d0d !important;
-    }
-
-    /* Boxes are dark and texts are light in dark mode */
-    body.dark-mode .card,
-    body.dark-mode .portfolio-card,
-    body.dark-mode .skills .skill-box,
-    body.dark-mode .about .personal-info,
-    body.dark-mode .testimonials .testimonial-item,
-    body.dark-mode .services .service-item,
-    body.dark-mode .contact .contact-form,
-    body.dark-mode .resume .resume-wrapper,
-    body.dark-mode .faq .faq-container .faq-item,
-    body.dark-mode .portfolio .portfolio-card,
-    body.dark-mode .service-details .content .features .feature-box,
-    body.dark-mode .service-details .service-info,
-    body.dark-mode .service-details .related-services,
-    body.dark-mode .portfolio-details .portfolio-description,
-    body.dark-mode .portfolio-details .portfolio-info {
-      background: #10232e !important;
+    /* Always use dark mode styles */
+    body,
+    body h1,
+    body h2,
+    body h3,
+    body h4,
+    body h5,
+    body h6,
+    .sitename,
+    .header-social-links a,
+    .navmenu a,
+    .btn,
+    .btn-outline,
+    .btn-outline-primary,
+    .portfolio-content,
+    .resume-wrapper,
+    .timeline-left,
+    .timeline-right,
+    .service-item,
+    .section-title,
+    .stat-label,
+    .stat-number,
+    .lead,
+    .description,
+    .profile-info,
+    .info-item,
+    .contact-info,
+    .footer,
+    .copyright,
+    .social-links a {
       color: #f5f5f5 !important;
-      box-shadow: 0 2px 24px rgba(255, 255, 255, 0.07), 0 1.5px 8px rgba(255, 255, 255, 0.04) !important;
+      background: none;
     }
 
-    /* Ensure all text inside boxes is light */
-    body.dark-mode .portfolio-details .portfolio-description *,
-    body.dark-mode .portfolio-details .portfolio-info * {
+    body {
+      background: #181818 !important;
+    }
+
+    .header {
+      border-radius: 0 !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background-color: #102040 !important; /* dark blue */
+      box-shadow: none !important;
+    }
+    .header,
+    .header *,
+    .header .sitename,
+    .header .navmenu a,
+    .header .header-social-links a {
+      color: #fff !important;
+    }
+
+    .footer,
+    .footer *,
+    .footer .social-links a {
+      color: #f5f5f5 !important;
+      background: none !important;
+    }
+    .footer {
+      background: #0e1a27 !important;
+    }
+
+    .section,
+    section {
+      background: #03121c !important;
       color: #f5f5f5 !important;
     }
 
-    /* Rounded corners and padding for info/description boxes */
+    .card,
+    .portfolio-card,
+    .skills .skill-box,
+    .about .personal-info,
+    .testimonials .testimonial-item,
+    .services .service-item,
+    .contact .contact-form,
+    .resume .resume-wrapper,
+    .faq .faq-container .faq-item,
+    .portfolio .portfolio-card,
+    .service-details .content .features .feature-box,
+    .service-details .service-info,
+    .service-details .related-services,
     .portfolio-details .portfolio-description,
     .portfolio-details .portfolio-info {
-      border-radius: 16px;
-      padding: 20px;
+      background: #10232e !important;
+      color: #f5f5f5 !important;
+      box-shadow: 0 2px 24px rgba(255,255,255,0.07), 0 1.5px 8px rgba(255,255,255,0.04) !important;
+    }
+
+    .card *,
+    .portfolio-card *,
+    .skills .skill-box *,
+    .about .personal-info *,
+    .testimonials .testimonial-item *,
+    .services .service-item *,
+    .contact .contact-form *,
+    .resume .resume-wrapper *,
+    .faq .faq-container .faq-item *,
+    .portfolio .portfolio-card *,
+    .service-details .content .features .feature-box *,
+    .service-details .service-info *,
+    .service-details .related-services *,
+    .portfolio-details .portfolio-description *,
+    .portfolio-details .portfolio-info * {
+      color: #f5f5f5 !important;
+    }
+
+    .navmenu a,
+    .navmenu a:focus,
+    .navmenu li,
+    .navmenu ul {
+      color: #fff !important;
+    }
+
+    /* Portfolio hover button background is dark blue, icon is light on all screens */
+    .portfolio-overlay .portfolio-actions a {
+      background: #102040 !important;
+      color: #fff !important;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin: 0 4px;
+      box-shadow: 0 2px 8px rgba(16,32,64,0.15);
+      transition: background 0.2s, color 0.2s;
+    }
+    .portfolio-overlay .portfolio-actions a:hover {
+      background: #328ae8 !important;
+      color: #fff !important;
+    }
+
+    /* Work experience and portfolio info boxes: rounded corners and padding */
+    .resume .resume-wrapper,
+    .portfolio-details .portfolio-description,
+    .portfolio-details .portfolio-info {
+      border-radius: 16px !important;
+      padding: 20px !important;
     }
 
     /* Responsive: 20px padding in body area only on mobile */
@@ -306,7 +366,6 @@
         padding-left: 20px !important;
         padding-right: 20px !important;
       }
-
       .container,
       .container-fluid,
       .section,
@@ -316,6 +375,23 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
+    }
+
+    /* Remove dark mode toggle button everywhere */
+    #darkModeToggle,
+    #darkModeToggleMobile,
+    button[aria-label="Toggle dark mode"] {
+      display: none !important;
+    }
+
+    .page-title {
+      background: #03121c !important;
+      color: #f5f5f5 !important;
+    }
+    .page-title *,
+    .page-title .breadcrumb,
+    .page-title .breadcrumb a {
+      color: #f5f5f5 !important;
     }
   </style>
 
