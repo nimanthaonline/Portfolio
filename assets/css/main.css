@@ -148,13 +148,18 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  border-radius: 0 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(255,255,255,0.85) !important;
+  box-shadow: none !important;
 }
 
 .header .header-container {
-  background: var(--surface-color);
-  border-radius: 50px;
-  padding: 5px 25px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 5px 0;
 }
 
 .header .logo {
@@ -215,6 +220,29 @@ h6 {
 
   .header .navmenu {
     order: 3;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header .header-social-links,
+  .header nav,
+  .header #darkModeToggle,
+  .header #darkModeToggleMobile {
+    display: none !important;
+  }
+  .header .sitename {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+  }
+  .header .logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
   }
 }
 
@@ -1002,13 +1030,6 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-.resume .resume-wrapper {
-  background: var(--surface-color);
-  border-radius: 24px;
-  padding: 50px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-}
-
 .resume .resume-wrapper .resume-block {
   margin-bottom: 3rem;
 }
@@ -1964,88 +1985,4 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}
-
-/* Add after your existing :root and .dark-background variables, or update as needed */
-
-/* Dark mode override using body.dark-mode */
-body.dark-mode {
-  --background-color: #191970;        /* Midnight Blue */
-  --surface-color: #0e1a27;           /* Slightly lighter midnight blue */
-  --default-color: #f5f5f5;
-  --heading-color: #ffffff;
-  --nav-color: #f5f5f5;
-  --nav-hover-color: #90caf9;
-  --nav-mobile-background-color: #2323e9;
-  --nav-dropdown-background-color: #23235c;
-  --nav-dropdown-color: #f5f5f5;
-  --nav-dropdown-hover-color: #90caf9;
-  --contrast-color: #0a0a25;
-}
-
-/* Optional: Ensure text and links are light in dark mode */
-body.dark-mode,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode .sitename,
-body.dark-mode .header-social-links a,
-body.dark-mode .navmenu a {
-  color: #f5f5f5 !important;
-}
-
-body.dark-mode a:hover {
-  color: #90caf9 !important;
-}
-
-body.dark-mode .btn,
-body.dark-mode .btn-outline,
-body.dark-mode .btn-outline-primary {
-  color: #f5f5f5;
-  border-color: #f5f5f5;
-}
-
-body.dark-mode .btn-outline:hover,
-body.dark-mode .btn-outline-primary:hover {
-  background: #f5f5f5;
-  color: #23235c;
-}
-
-/* Section and card backgrounds for dark mode */
-body.dark-mode .section,
-body.dark-mode section {
-  background: #0e1a27 !important;
-  color: #f5f5f5;
-}
-
-body.dark-mode .card,
-body.dark-mode .portfolio-card,
-body.dark-mode .skills .skill-box,
-body.dark-mode .about .personal-info,
-body.dark-mode .testimonials .testimonial-item,
-body.dark-mode .services .service-item,
-body.dark-mode .contact .contact-form {
-  background: #1a3047;
-  color: #f5f5f5;
-}
-
-/* Light shadow for dark mode */
-body.dark-mode .header .header-container,
-body.dark-mode .card,
-body.dark-mode .portfolio-card,
-body.dark-mode .skills .skill-box,
-body.dark-mode .about .personal-info,
-body.dark-mode .testimonials .testimonial-item,
-body.dark-mode .services .service-item,
-body.dark-mode .contact .contact-form,
-body.dark-mode .resume .resume-wrapper,
-body.dark-mode .faq .faq-container .faq-item,
-body.dark-mode .portfolio .portfolio-card,
-body.dark-mode .service-details .content .features .feature-box,
-body.dark-mode .service-details .service-info,
-body.dark-mode .service-details .related-services {
-  box-shadow: 0 2px 24px rgba(255,255,255,0.07), 0 1.5px 8px rgba(255,255,255,0.04);
 }
